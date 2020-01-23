@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<!--<![ENDif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alumni Form Validation</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<style>
+body {
+   margin-left: 1px;
+   margin-top: 5px;
+      padding: 0;
+      background-color:#3cb371;
+      color:#FFF;  
+      color: #262626;
+      font-size: 18px;
+      line-height: 1.8;
+      font-family: "Poppins";
+      text-align: justify;
+}
+h1{text-align:center; color: black;background:rgb(0, 0, 255);}
+</style>
+</head>
+
+<body>
+  <div class="container">
+  <h1>Alumni Form Validation</h1>
+  <form class="form-horizontal" action="#" method="post" id="validateForm">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-4">
+
+        <div class="form-group">
+        <label class="control-label">Full Name:</label>
+        <input  name="full_name" placeholder="Full Name" class="form-control"  type="text">
+        </div>
+        
+        <div class="form-group">
+        <label class="control-label">Phone No.:</label>
+        <input name="phone" placeholder="Phone No" class="form-control" type="text">
+        </div>
+        
+        <div class="form-group">
+        <label class="control-label">Address:</label>
+        <textarea class="form-control" name="address" placeholder="Address..."></textarea>
+        </div>
+        <div class="form-group">
+        <label class="control-label">Batch:</label>
+        <input name="Batch" placeholder="Batch-year" class="form-control" type="text">
+        </div>
+      
+        <div class="form-group">
+        <label>Gender</label>
+        <div class="radio">
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="gender" value="others" /> others</label>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-offset-1 col-md-4">
+      <div class="form-group">
+        <label class="control-label">E-Mail:</label>
+        <input name="email" placeholder="E-Mail" class="form-control"  type="text">
+        </div>
+        
+      <div class="form-group has-feedback">
+        <label for="password"  class="control-label">Password</label>
+        <input class="form-control" id="userPw" type="password" placeholder="password" name="password"  />
+      </div>
+     
+      <div class="form-group has-feedback">
+        <label for="confirmPassword"  class="control-label"> Confirm Password </label>
+         <input class="form-control" id="userPw2" type="password" placeholder="Confirm password" name="confirmPassword" /> 
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label">Role:</label>
+        <select name="role" class="form-control" >
+          <option value=" " >Please select role</option>
+          <option>Admin</option>
+          <option>User</option>
+          <option>Others</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Please select college</label>
+        <select name="college" class="form-control" >
+          <option value=" " >Please select college</option>
+          <option>IIIT Bhagalpur,bihar</option>
+          <option>BHU,varanasi</option>
+          <option>NIT,patna,bihar</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Language Known:</label>
+        <div class="checkbox">
+          <label><input type="checkbox" name="lang_known[]" value="E" /> English</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="lang_known[]" value="T" /> Hindi</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="lang_known[]" value="O" /> Other</label>
+        </div>
+      </div>
+      
+      
+       
+      <div class="form-group">
+        <button type="submit" class="btn btn-success" >Submit</button>
+        </div>
+        
+    </div>
+  </div>
+  
+  </form>
+  </div>
+  <!-- /.container --> 
+  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+<script type="text/javascript">
+ 
+   $(document).ready(function() {
+  $('#validateForm').bootstrapValidator({
+  feedbackIcons: {
+    valid: 'glyphicon glyphicon-ok',
+    invalid: 'glyphicon glyphicon-remove',
+    validating: 'glyphicon glyphicon-refresh'
+  },
+  fields: {
+    full_name: {
+      validators: {
+        stringLength: {
+          min: 5,
+          message: 'Please Enter your Full name with minimum 5 letters length'
+        },
+        notEmpty: {
+          message: 'Please Enter your Full name'
+        }
+      }
+    },
+    phone: {
+      validators: {
+        numeric: {
+          message: 'The phone no must be a number'
+        },
+        notEmpty: {
+          message: 'Please Enter your phone number'
+        }
+      }
+    },
+    Batch: {
+      validators: {
+        numeric: {
+          message: 'Batch-year must be a number'
+        },
+        notEmpty: {
+          message: 'Please Enter your Batch-year'
+        }
+      }
+    },
+    address: {
+      validators: {
+        stringLength: {
+          min: 15,
+          max: 100,
+          message:'Please enter at least 15 characters and no more than 100'
+        },
+        notEmpty: {
+          message: 'Please Enter Address'
+        }
+      }
+    },
+    gender: {
+      validators: {
+        notEmpty: {
+          message: 'The gender option is required'
+        }
+      }
+    },
+    email: {
+      validators: {
+        notEmpty: {
+          message: 'Please Enter your email address'
+        },
+        emailAddress: {
+          message: 'Please Enter a valid email address'
+        }
+      }
+    },
+    password: {
+      validators: {
+        notEmpty: {
+          message: 'Enter your profile password'
+        }
+      }
+    },
+    confirmPassword: {
+      validators: {
+        notEmpty: {
+          message: 'Enter confirm your profile password'
+        },
+        identical: {
+          field: 'password',
+          message: 'Enter the password, what enter in password field'
+        }
+      }
+     },
+     'lang_known[]': {
+      validators: {
+        notEmpty: {
+          message: 'The Language Known is required'
+        }
+      }
+    },
+    role: {
+      validators: {
+        notEmpty: {
+          message: 'Choose your user role'
+        }
+      }
+    },
+    college: {
+      validators: {
+        notEmpty: {
+          message: 'select your college '
+        }
+      }
+    },
+    
+    }
+  });
+});
+</script>
+</body>
+</html>

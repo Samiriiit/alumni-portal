@@ -200,6 +200,9 @@ nav>ul ul {
             margin-bottom:1%;
       }
   } 
+	#news,.upcoming-events{border:0px solid blue;background: pink;min-height:250px;}
+.caption>h3,.section-heading>h3{background:#f52f4c;border-radius:5px;padding:5px 3px 5px 3px;color: white;margin-left:7px;margin-right:-7px;}
+.caption>a{color:white;}	
 	/*................Footer..................*/
 .footer-widgets {
       position: relative;
@@ -302,7 +305,163 @@ nav>ul ul {
       border-radius: 2px;
       background: white;
   }	
-		
+.section-heading  .entry-title::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 2px;
+      border-radius: 2px;
+      background: white;
+  }
+ 
+
+.home-page-events {
+      padding: 40px 0;
+  }
+  
+  .section-heading .entry-title {
+      position: relative;
+      padding-bottom: 24px;
+      font-size: 36px;
+      font-weight: 600;
+  }
+  
+  
+  
+  @media screen and (max-width: 992px) {
+      .home-page-events .featured-cause .section-heading {
+          margin-top: 8px;
+      }
+  }
+  
+  .event-wrap {
+      margin-top: 4px;
+  }
+  
+  .event-wrap figure {
+      width: 144px;
+      height: auto;
+  }
+  
+  .event-wrap figure img {
+      display: block;
+      width: 100%;
+  }
+  
+  .event-content-wrap {
+      width: calc(100% - 180px);
+      margin-top: -10px;
+  }
+  
+  .event-content-wrap .entry-title a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #262626;
+  }
+  
+  .event-content-wrap .posted-date a,
+  .event-content-wrap .cats-links a {
+      display: block;
+      position: relative;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1;
+      color: #262626;
+  }
+  
+  .event-content-wrap .posted-date a {
+      padding-right: 14px;
+      margin-right: 14px;
+  }
+  
+  .event-content-wrap .posted-date a::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: #262626;
+  }
+  
+  .event-content-wrap .entry-content {
+      margin-top: 2px;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: #929191;
+  }
+  
+  .event-content-wrap .entry-footer a {
+      display: block;
+      margin-top: 3px;
+      font-size: 14px;
+      color: blue;
+      text-decoration: none;
+  }
+/*
+# Featured Cause
+--------------------------------*/
+.home-page-events {
+      padding: 6px 0;
+  }
+  
+  .cause-wrap {
+      margin-top: 9px;
+  }
+  
+  .featured-cause .cause-wrap {
+      padding: 14px 2px;
+      background: #edf3f5;
+  }
+  
+  .featured-cause .featured-cause .cause-wrap figure {
+      width: 246px;
+      height: auto;
+  }
+  
+  .cause-wrap figure img {
+      display: block;
+      width: 100%;
+  }
+  
+  .featured-cause .cause-content-wrap {
+      width: calc(100% - 280px);
+  }
+  
+  .cause-content-wrap .entry-title a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #262626;
+  }
+  
+  .cause-content-wrap .posted-date a,
+  .cause-content-wrap .cats-links a {
+      display: block;
+      position: relative;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1;
+      color: #262626;
+  }
+  
+  .cause-content-wrap .posted-date a {
+      padding-right: 4px;
+      margin-right: 4px;
+  }
+  
+ 
+  
+  .cause-content-wrap .entry-content {
+      margin-top: 8px;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: #929191;
+  }
+  		
 </style>
 
 </head>
@@ -432,6 +591,122 @@ nav>ul ul {
           </a>
         </div>
       </div>
+	
+	<div class="row">
+       <div class="col-lg-4 col-md-4 col-sm-6">
+
+
+              <div class="block"id="news">
+                
+                    
+                    <div class="caption">
+                      <h3>News and Annoucements</h3>
+                    <Marquee behavior="scroll" scrolldelay=200 truespeed=80 direction=up onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 6, 0);"> 
+		    
+		 
+		  
+                     <img src="new3.gif" alt="" width="30" height="30"><a href="#"style=color:black;"><b>Department of English wins Pegasus 2020 <a><br><br>
+                     <img src="new3.gif" alt="" width="30" height="30"><a href="#"style=color:black;">GU faculty members honoured</a><br><br>
+                     <img src="new3.gif" alt="" width="30" height="30"><a href="#"style=color:black;">Shivam Sundaram tops fourth in the CSIR-UGC NET</a><br><br>
+                     <img src="new3.gif" alt="" width="30" height="30">  <a href="#"style=color:black;">GU in News: GU girls finish third </a><br><br>
+                  <a href="#"style=color:black;">Ph.D. Admissions (Last Date: 24 Jan 2020) </a><br><br>
+ 
+                  <a href="#"style=color:black;">MHRD Internship Scheme-2019</a><br><br>
+                   <a href="#"style=color:black;">
+MBA-Executive (Last Date: 20 Mar 2020)</a><br><br>
+		   <a href="#"style=color:black;">
+MBA-Executive (Last Date: 20 Mar 2020)</b></a><br><br>
+                  
+		</marquee>
+		</div>
+                
+              </div>
+            
+
+
+
+        </div>
+<div class="col-lg-4 col-md-4 col-sm-6">
+ 
+        
+
+
+                    
+                        <div class="upcoming-events">
+                                    
+
+                            <div class="section-heading">
+                                <h3>Events</h3>
+                            </div>
+                            <div class="event-wrap d-flex flex-wrap justify-content-between">
+                                <figure class="m-0">
+                                    <img src="poster.png" alt="">
+                                </figure>
+    
+                                <div class="event-content-wrap">
+                                    <header class="entry-header d-flex flex-wrap align-items-center">
+                                        <h3 class="entry-title w-100 m-0"><a href="#">Annual Alumini Meetup 2019</a></h3>
+    
+                                        <div class="posted-date">
+                                            <a href="#">Sept 9, 2019 </a>
+                                        </div>
+    
+                                        <div class="cats-links">
+                                            <a href="#">Panji,Goa</a>
+                                        </div>
+                                    </header>
+    
+                                    
+    
+                                    <div class="entry-footer">
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+    <br/>
+                            <div class="event-wrap d-flex flex-wrap justify-content-between">
+                                <figure class="m-0">
+                                    <img src="alumni2.jpg" alt="">
+                                </figure>
+    
+                                <div class="event-content-wrap">
+                                    <header class="entry-header d-flex flex-wrap align-items-center">
+                                        <h3 class="entry-title w-100 m-0"> <a href="#">Annual Alumini Meetup 2020</a></h3>
+    
+                                        <div class="posted-date">
+                                            <a href="#">Jan 29, 2020 </a>
+                                        </div>
+    
+                                        <div class="cats-links">
+                                            <a href="#">Goa University</a>
+                                        </div>
+                                    </header>
+    
+                                    <div class="entry-footer">
+                                        <a href="#">Read More</a>
+                                    </div><!-- .entry-footer -->
+                                </div><!-- .event-content-wrap -->
+                            </div><!-- .event-wrap -->
+    
+                          
+                        </div><!-- .upcoming-events -->
+                        
+                    
+
+
+
+        </div>
+        <div class="col-md-4">
+
+  
+</div>
+        </div>
+         </div>
+  
+	
+	
+	
+	
 	<br/>
 <footer class="site-footer">
       <div class="footer-widgets">
